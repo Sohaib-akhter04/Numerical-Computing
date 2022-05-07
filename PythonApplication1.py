@@ -1,20 +1,5 @@
 
-#Numerical Computing Lab 1.
-#Group members:
-#Muhammad Fahad 20K-0441
-#Faizan Feroz 20K-0171
-#Mubin 20K-0211
-#Sohaib 20K-0292
 
-
-#instructions for input expressions:
-#algebraic expressions with powers need to be input separately; x*x -> x squared and so on.
-#trigonometric and logarithmic expressions as: sin(x) and log(x), with log10(x) for log base 10.
-#exponential expressions need o be input as: exp(x), for e^x.
-#pi is input as is and sqrt(4) for square root of 4.
-
-#the primary breaking condition will be when consequtive values of c are changing within margin of epsilon value.
-#additionally, max iterations are also a breaking condition if the user wants.
 
 import sys
 import numpy as np
