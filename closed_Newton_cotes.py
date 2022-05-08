@@ -51,7 +51,7 @@ def simpson(f, expr):
     print('\nIntegral is: %0.9f' % ans)
     a_der = sy.derivative(func_eval, a, dx=0.001, n=4, order=5)
     b_der = sy.derivative(func_eval, b, dx=0.001, n=4, order=5)
-    error = ((h**5) / 90) * max(a_der, b_der)
+    error = ((h**5) / 90) * max(abs(a_der), abs(b_der))
 
     print('\nBound Error is: %0.9f' % error)
     real_value=absolute(a,b,expr)
@@ -72,7 +72,7 @@ def trapezoidal(f, expr):
 
     a_der = sy.derivative(func_eval, a, dx=0.001, n=2, order=3)
     b_der = sy.derivative(func_eval, b, dx=0.001, n=2, order=3)
-    error = ((h**3) / 12) * max(a_der, b_der)
+    error = ((h**3) / 12) * max(abs(a_der), abs(b_der))
 
     print('\nBound Error is: %0.9f' % error)
     real_value=absolute(a,b,expr)
@@ -93,7 +93,7 @@ def simpsons_three_eights(f, expr):
     print('\nIntegral is: %0.9f' % ans)
     a_der = sy.derivative(func_eval, a, dx=0.001, n=4, order=7)
     b_der = sy.derivative(func_eval, b, dx=0.001, n=4, order=7)
-    error = (3*(h**5) / 80) * max(a_der, b_der)
+    error = (3*(h**5) / 80) * max(abs(a_der), abs(b_der))
 
     print('\nBound Error is: %0.9f' % error)
     real_value=absolute(a,b,expr)
@@ -115,7 +115,7 @@ def n_4(f, expr):
     print('\nIntegral is: %0.9f' % ans)
     a_der = sy.derivative(func_eval, a, dx=0.001, n=6, order=7)
     b_der = sy.derivative(func_eval, b, dx=0.001, n=6, order=7)
-    error = abs((8*(h**7) / 945) * max(a_der, b_der))
+    error = abs((8*(h**7) / 945) * max(abs(a_der), abs(b_der)))
 
     print('\nBound Error is: %0.9f' % error)
     real_value=absolute(a,b,expr)
